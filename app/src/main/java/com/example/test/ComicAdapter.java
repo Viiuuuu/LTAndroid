@@ -16,10 +16,19 @@ public class ComicAdapter extends RecyclerView.Adapter<ComicAdapter.Holder> {
 
     private Context context;
     private List<Comic> list;
+    private OnComicClickListener onComicClickListener;
+
+    public interface OnComicClickListener {
+        void onComicClick(Comic comic);
+    }
 
     public ComicAdapter(Context context, List<Comic> list) {
         this.context = context;
         this.list = list;
+    }
+
+    public void setOnComicClickListener(OnComicClickListener listener) {
+        this.onComicClickListener = listener;
     }
 
     @NonNull
@@ -35,6 +44,12 @@ public class ComicAdapter extends RecyclerView.Adapter<ComicAdapter.Holder> {
         holder.img.setImageResource(c.getImageResId());
         holder.title.setText(c.getTitle());
         holder.chapter.setText(c.getChapter());
+
+        holder.itemView.setOnClickListener(v -> {
+            if (onComicClickListener != null) {
+                onComicClickListener.onComicClick(c);
+            }
+        });
     }
 
     @Override
