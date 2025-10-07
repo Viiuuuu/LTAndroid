@@ -3,7 +3,6 @@ package com.example.test;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -66,18 +65,18 @@ public class MainActivity extends AppCompatActivity {
         recyclerComics = findViewById(R.id.recyclerComics);
         recyclerHot = findViewById(R.id.recyclerHot);
 
-        // Setup dữ liệu mẫu
+        // Setup dữ liệu mẫu - SỬA LẠI TÊN ẢNH
         comicList = new ArrayList<>();
-        // sử dụng ic_launcher_foreground làm ảnh demo (có sẵn)
-        comicList.add(new Comic(R.drawable.ic_launcher_foreground, "Thợ Săn Hạng S", "Chap 63"));
-        comicList.add(new Comic(R.drawable.ic_launcher_foreground, "Đại Tiểu Thư", "Chap 108"));
-        comicList.add(new Comic(R.drawable.ic_launcher_foreground, "Sống Sót Như Nàng", "Chap 8"));
-        comicList.add(new Comic(R.drawable.ic_launcher_foreground, "Xin Người Hãy Chăm Sóc", "Chap 26"));
+        // Sử dụng ảnh có sẵn và ảnh bạn đã thêm
+        comicList.add(new Comic(R.drawable.anh1, "Thợ Săn Hạng S", "Chap 63"));
+        comicList.add(new Comic(R.drawable.anh1, "Đại Tiểu Thư", "Chap 108"));
+        comicList.add(new Comic(R.drawable.anh1, "Sống Sót Như Nàng", "Chap 8"));
+        comicList.add(new Comic(R.drawable.anh1, "Xin Người Hãy Chăm Sóc", "Chap 26"));
 
         hotList = new ArrayList<>();
-        hotList.add(new Comic(R.drawable.ic_launcher_foreground, "Hot: Bát Đặc", "Chap 6"));
-        hotList.add(new Comic(R.drawable.ic_launcher_foreground, "Hot: Trở Thành Mới", "Chap 34"));
-        hotList.add(new Comic(R.drawable.ic_launcher_foreground, "Hot: [18+] Cuộc Hôn", "Chap 39"));
+        hotList.add(new Comic(R.drawable.anh1, "Hot: Bát Đặc", "Chap 6"));
+        hotList.add(new Comic(R.drawable.anh1, "Hot: Trở Thành Mới", "Chap 34"));
+        hotList.add(new Comic(R.drawable.anh1, "Hot: [18+] Cuộc Hôn", "Chap 39"));
 
         // Adapter & layout
         comicAdapter = new ComicAdapter(this, comicList);

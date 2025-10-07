@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Test</string>
+    <string name="profile_title">Hồ sơ</string>
+    <string name="settings">Cài đặt</string>
+    <string name="label_username">User name</string>
+    <string name="label_dob">Ngày sinh</string>
+    <string name="label_gender">Giới tính</string>
+    <string name="label_email">Email</string>
 </resources>

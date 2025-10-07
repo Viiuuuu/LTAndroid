@@ -15,8 +15,8 @@ public class Login extends AppCompatActivity {
     private Button btnLogin;
     private TextView tvForgotPassword;
     private SharedPreferences sharedPreferences;
-    private static final String PREFS_NAME = "LoginPrefs";
-    private static final String KEY_IS_LOGGED_IN = "isLoggedIn";
+    private static final String PREFS_NAME = "Haviiu";
+    private static final String KEY_IS_LOGGED_IN = "123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +34,11 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = edtEmail.getText().toString();
+                String username = edtEmail.getText().toString();
                 String pass = edtPassword.getText().toString();
 
                 // Kiểm tra thông tin đăng nhập (ở đây chỉ là demo)
-                if (email.isEmpty() || pass.isEmpty()) {
+                if (username.isEmpty() || pass.isEmpty()) {
                     Toast.makeText(Login.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 } else {
                     // Đăng nhập thành công
@@ -49,8 +49,12 @@ public class Login extends AppCompatActivity {
                     editor.putBoolean(KEY_IS_LOGGED_IN, true);
                     editor.apply();
 
-                    // Quay về MainActivity
-                    Intent intent = new Intent(Login.this, MainActivity.class);
+                    // Chuyển sang trang Profile và truyền thông tin người dùng
+                    Intent intent = new Intent(Login.this, Profile.class);
+                    intent.putExtra("username", username);
+                    intent.putExtra("dob", "11/01/2005");
+                    intent.putExtra("gender", "Nữ");
+                    intent.putExtra("email", "nguyenhavyy0105@gmail.com");
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     finish();
