@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="16dp"
+	android:background="@drawable/gradient_background">
+
+	<!-- Header with centered title, left back text, right settings icon -->
+	<RelativeLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="12dp"
+		android:paddingBottom="8dp">
+
+		<TextView
+			android:id="@+id/tvBack"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Quay lại để đọc"
+			android:drawableStart="@drawable/ic_arrow_back"
+			android:drawablePadding="6dp"
+			android:textColor="@color/text_white"
+			android:textSize="14sp"
+			android:padding="8dp"
+			android:layout_alignParentStart="true"
+			android:layout_centerVertical="true"/>
+
+		<TextView
+			android:id="@+id/tvHeaderTitle"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/profile_title"
+			android:textStyle="bold"
+			android:textSize="22sp"
+			android:textColor="@color/text_white"
+			android:layout_centerInParent="true"/>
+
+		<ImageButton
+			android:id="@+id/btnSettingsProfile"
+			android:layout_width="48dp"
+			android:layout_height="48dp"
+			android:src="@drawable/ic_settings"
+			android:background="@drawable/button_pastel_style"
+			android:contentDescription="@string/settings"
+			android:layout_alignParentEnd="true"/>
+	</RelativeLayout>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical"
+		android:background="@drawable/card_pastel_style"
+		android:padding="16dp"
+		android:layout_marginTop="16dp">
+
+		<TextView
+			android:text="@string/label_username"
+			android:textColor="@color/text_secondary"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<TextView
+			android:id="@+id/tvUsername"
+			android:textColor="@color/text_primary"
+			android:textSize="18sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="8dp"/>
+
+		<TextView
+			android:text="@string/label_dob"
+			android:textColor="@color/text_secondary"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<TextView
+			android:id="@+id/tvDob"
+			android:textColor="@color/text_primary"
+			android:textSize="18sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="8dp"/>
+
+		<TextView
+			android:text="@string/label_gender"
+			android:textColor="@color/text_secondary"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<TextView
+			android:id="@+id/tvGender"
+			android:textColor="@color/text_primary"
+			android:textSize="18sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+
+		<View
+			android:layout_width="match_parent"
+			android:layout_height="8dp"/>
+
+		<TextView
+			android:text="@string/label_email"
+			android:textColor="@color/text_secondary"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+		<TextView
+			android:id="@+id/tvEmail"
+			android:textColor="@color/text_primary"
+			android:textSize="18sp"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"/>
+	</LinearLayout>
+
+</LinearLayout>
+
+
